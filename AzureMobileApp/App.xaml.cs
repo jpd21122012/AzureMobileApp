@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.WindowsAzure.MobileServices;
+using System.Data;
 
 namespace AzureMobileApp
 {
@@ -31,7 +33,7 @@ namespace AzureMobileApp
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
-
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://EnigmaMx0.azurewebsites.net");
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
